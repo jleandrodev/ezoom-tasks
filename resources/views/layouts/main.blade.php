@@ -32,8 +32,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/events/create" class="nav-link">
-                                    Criar Tarefas
+                                <a href="/tasks/create" class="nav-link">
+                                    Criar Tarefa
                                 </a>
                             </li>
                             <li class="nav-item">
