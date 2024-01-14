@@ -29,8 +29,6 @@ O Gerenciador de Tarefas é uma aplicação web construída com Laravel, um fram
 
 1. **Clonar o Repositório:**
 
-   bashCopy code
-
    `git clone https://github.com/jleandrodev/ezoom-tasks.git`
 2. **Instalar Dependências:**
 
