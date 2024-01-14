@@ -53,4 +53,18 @@ class TaskController extends Controller
         return redirect('/')->with('msg', 'Tarefa deletada com sucesso!');
 
     }
+
+    public function edit($id) {
+        $task = Task::findOrFail($id);
+
+        return view('tasks.edit', ['task' => $task]);
+    }
+
+    public function update(Request $request) {
+        $data = $request->all();
+
+        Task::findOrFail($request->id)->update($data);
+
+        return redirect('/')->with('msg', 'Tarefa editada com sucesso!');
+    }
 }
