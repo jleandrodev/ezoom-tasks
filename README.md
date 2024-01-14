@@ -28,25 +28,32 @@ O Gerenciador de Tarefas é uma aplicação web construída com Laravel, um fram
 ## Como Executar o Projeto 
 
 1. **Clonar o Repositório:**
-
-   `git clone https://github.com/jleandrodev/ezoom-tasks.git`
+   ```bash
+   git clone https://github.com/jleandrodev/ezoom-tasks.git
+   ```
 2. **Instalar Dependências:**
-
-   ``cd ezoom-tasks ``
-   ``composer install``
+    ```bash
+   cd ezoom-tasks
+   composer install
+   ```
 3. **Configurar o Banco de Dados:**
 
    - Crie um novo banco de dados MySQL.
    - Copie o arquivo `.env.example` para `.env` e configure a conexão com o banco de dados.
 4. **Gerar Chave de Aplicação:**
-
-   `php artisan key:generate`
+    ```bash
+   php artisan key:generate
+    ```
 5. **Executar as Migrações:**
-
-   `php artisan migrate`
+    ```bash
+    php artisan migrate
+    ```
+   
 6. **Iniciar o Servidor da Aplicação:**
-
-   `php artisan serve`
+    ```bash
+    php artisan serve
+    ```
+   
 7. **Acessar a Aplicação:** Abra seu navegador e acesse http://localhost:8000
 
 ## Autenticação 
