@@ -1,0 +1,82 @@
+/* Configurações gerais */
+* {
+    font-family: 'Roboto';
+}
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header {
+    background-color: #fff;
+}
+
+.msg {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.row {
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #119C13;
+    border: 2px solid #1AE01D;
+}
+
+.btn-primary:hover {
+    background-color: #1AE01D;
+    border: 2px solid #119C13;
+}
+
+/* Navbar */
+#navbar {
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+}
+
+#navbar a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #757575;
+    
+}
+
+#navbar a:hover {
+    color: #119C13;
+    
+}
+
+#navbar img {
+    width: 70px;
+}
+
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #1C222E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
