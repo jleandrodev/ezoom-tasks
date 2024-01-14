@@ -80,3 +80,56 @@ footer {
 footer p {
     margin-bottom: 0;
 }
+
+/* Index */
+
+#search-container {
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    background-color: #1C222E;
+}
+
+#search-container h1 {
+    color: #757575;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#events-container .card {
+    flex: 1 1 24%;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: .5%;
+}
+.card-status-concluida {
+    background-color: #D4EDDA;
+    color: #155724;
+    width: 85px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card-status-pendente {
+    background-color: #98c3ed;
+    color: #318CE7;
+    width: 85px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card-status-cancelada {
+    background-color: #ff7676;
+    color: #9a0526;
+    width: 85px;
+    border-radius: 5px;
+    text-align: center;
+}
