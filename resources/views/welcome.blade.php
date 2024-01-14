@@ -23,7 +23,7 @@
                 <h5 class="card-title">{{ $task->title }}</h5>
                 <p class="{{ $task->status === 'Pendente' ? 'card-status-pendente' : ($task->status === 'Concluída' ? 'card-status-concluida' : 'card-status-cancelada') }}">{{ $task->status }}</p>
                 <p class="card-participantes"><ion-icon name="person-outline"></ion-icon> Responsável</p>
-                <a href="#" class="btn btn-primary">Ver Tarefa</a>
+                <a href="/tasks/{{ $task->id }}" class="btn btn-primary">Ver Tarefa</a>
             </div>
         </div>
         @endforeach
