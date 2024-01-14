@@ -34,7 +34,7 @@
         </p>
 
         @elseif(count($tasks) == 0)
-        <p>Não existem eventos disponíveis...</p>
+        <p>Não existem tarefas para serem listadas...</p>
         @endif
     </div>
 </div>

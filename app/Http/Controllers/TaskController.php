@@ -9,9 +9,17 @@ use App\Models\Task;
 class TaskController extends Controller
 {
     public function index() {
-        $tasks = Task::all();
 
-        $search = '';
+        $search = request('search');
+
+        if($search) {
+            $tasks = Task::where([
+                ['title', 'like', '%'.$search.'%']
+            ])->get();
+        } else {
+
+            $tasks = Task::all();
+        }
 
         return view('welcome', ['tasks' => $tasks, 'search' => $search]);
     }
