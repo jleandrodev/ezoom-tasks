@@ -1,66 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Gerenciador de Tarefas 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Visão Geral 
 
-## About Laravel
+O Gerenciador de Tarefas é uma aplicação web construída com Laravel, um framework web em PHP. Permite aos usuários gerenciar tarefas, oferecendo recursos para criar, editar e excluir tarefas. Além disso, inclui um painel para os usuários visualizarem suas próprias tarefas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Tecnologias Utilizadas 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Laravel
+- PHP
+- MySQL (como banco de dados padrão)
+- Bootstrap (para estilos)
+- Livewire (para interações dinâmicas)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Recursos 
 
-## Learning Laravel
+1. **Gerenciamento de Tarefas:**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+   - Visualizar uma lista de tarefas.
+   - Criar uma nova tarefa.
+   - Visualizar detalhes de uma tarefa específica.
+   - Editar uma tarefa existente.
+   - Excluir uma tarefa.
+2. **Painel do Usuário:**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+   - Os usuários têm um painel personalizado exibindo as tarefas que lhes são atribuídas.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Como Executar o Projeto 
 
-## Laravel Sponsors
+1. **Clonar o Repositório:**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+   bashCopy code
 
-### Premium Partners
+   `git clone https://github.com/jleandrodev/ezoom-tasks.git`
+2. **Instalar Dependências:**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+   ``cd ezoom-tasks composer install``
+3. **Configurar o Banco de Dados:**
 
-## Contributing
+   - Crie um novo banco de dados MySQL.
+   - Copie o arquivo `.env.example` para `.env` e configure a conexão com o banco de dados.
+4. **Gerar Chave de Aplicação:**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   `php artisan key:generate`
+5. **Executar as Migrações:**
 
-## Code of Conduct
+   `php artisan migrate`
+6. **Iniciar o Servidor da Aplicação:**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+   `php artisan serve`
+7. **Acessar a Aplicação:** Abra seu navegador e acesse http://localhost:8000
 
-## Security Vulnerabilities
+## Autenticação 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+A aplicação utiliza o sistema de autenticação integrado do Laravel. Os usuários precisam se registrar e fazer login para acessar os recursos de gerenciamento de tarefas e o painel personalizado.
 
-## License
+## Documentação da API 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Endpoints 
+
+1. **Listar todas as tarefas:**
+
+   - **Endpoint:** `/tasks`
+   - **Método:** GET
+2. **Obter detalhes de uma tarefa específica:**
+
+   - **Endpoint:** `/tasks/{id}`
+   - **Método:** GET
+3. **Criar uma nova tarefa:**
+
+   - **Endpoint:** `/tasks`
+   - **Método:** POST
+   - **Parâmetros:** `title`, `description`, `status`, `user_id`
+4. **Atualizar uma tarefa existente:**
+
+   - **Endpoint:** `/tasks/update/{id}`
+   - **Método:** PUT
+   - **Parâmetros:** `title`, `description`, `status`
+5. **Excluir uma tarefa:**
+
+   - **Endpoint:** `/tasks/{id}`
+   - **Método:** DELETE
+6. **Painel do Usuário:**
+
+   - **Endpoint:** `/dashboard`
+   - **Método:** GET
+
+### Uso
+
+- Para listar todas as tarefas: `GET /tasks`
+- Para obter detalhes de uma tarefa: `GET /tasks/{id}`
+- Para criar uma nova tarefa: `POST /tasks` com parâmetros `title`, `description`, `status`, `user_id`
+- Para atualizar uma tarefa existente: `PUT /tasks/update/{id}` com parâmetros `title`, `description`, `status`
+- Para excluir uma tarefa: `DELETE /tasks/{id}`
+- Para visualizar o painel do usuário: `GET /dashboard`
+
+## Observações Adicionais
+
+- Certifique-se de ter o Composer e o PHP instalados em sua máquina.
+- Atualize o arquivo `.env` com suas credenciais do banco de dados.
+- Garanta que as extensões PHP necessárias estejam instaladas (por exemplo, extensão MySQL).
