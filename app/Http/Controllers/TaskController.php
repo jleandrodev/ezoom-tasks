@@ -45,4 +45,12 @@ class TaskController extends Controller
 
         return view('tasks.show', ['task' => $task]);
     }
+
+    public function destroy($id) {
+
+        Task::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg', 'Tarefa deletada com sucesso!');
+
+    }
 }
