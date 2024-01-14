@@ -67,4 +67,9 @@ class TaskController extends Controller
 
         return redirect('/')->with('msg', 'Tarefa editada com sucesso!');
     }
+
+    public function dashboard() {
+        $tasks = Task::all();
+        return redirect('/');
+    }
 }
