@@ -32,7 +32,8 @@ O Gerenciador de Tarefas é uma aplicação web construída com Laravel, um fram
    `git clone https://github.com/jleandrodev/ezoom-tasks.git`
 2. **Instalar Dependências:**
 
-   ``cd ezoom-tasks composer install``
+   ``cd ezoom-tasks ``
+   ``composer install``
 3. **Configurar o Banco de Dados:**
 
    - Crie um novo banco de dados MySQL.
