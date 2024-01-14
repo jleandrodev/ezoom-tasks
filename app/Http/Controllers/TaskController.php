@@ -74,7 +74,10 @@ class TaskController extends Controller
     }
 
     public function dashboard() {
-        $tasks = Task::all();
-        return redirect('/');
+        $user = auth()->user();
+        $tasks = $user->tasks;
+
+        return view('tasks.dashboard', compact('tasks'));
+
     }
 }

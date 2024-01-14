@@ -34,6 +34,10 @@ header {
     border: 2px solid #1AE01D;
 }
 
+.btn {
+    margin-right: 5px;
+}
+
 .btn-primary:hover {
     background-color: #1AE01D;
     border: 2px solid #119C13;
@@ -170,4 +174,20 @@ footer p {
 #info-container .btn {
     margin-right: 5px;
 }
+
+/* dashboard */
+
+.dashboard-title-container {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+.dashboard-events-container td {
+    width: 20%;
+}
+
+
+#custom-thead {
+    border-radius: 10px;
+  }
 
