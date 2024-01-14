@@ -16,7 +16,7 @@
                     {{ $task->status }}
                 </span>
             </p>
-            <p class="task-resp"><ion-icon class="info-icon" name="people-outline"></ion-icon> Responsável</p>
+            <p class="task-resp"><ion-icon class="info-icon" name="people-outline"></ion-icon> {{ $task->user->name }}</p>
             <h3>Descrição da Tarefa:</h3>
             <p class="task-description">{{ $task->description }}</p>
 

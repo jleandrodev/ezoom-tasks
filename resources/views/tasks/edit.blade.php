@@ -17,6 +17,14 @@
             <textarea name="description" id="description" class="form-control" >{{ $task->description }}</textarea>
         </div>
         <div class="form-group">
+            <label for="user_id">Responsável:</label>
+            <select name="user_id" id="user_id" class="form-control">
+                @foreach($users as $user)
+                    <option {{ $task->user == $user ? "selected='selected'" : "" }} value="{{ $user->id }}">{{ $user->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="status">Status:</label>
             <select name="status" id="status" class="form-control">
                 <option value="Pendente" {{ $task->status == "Pendente" ? "selected='selected'" : ""}}>Pendente</option>

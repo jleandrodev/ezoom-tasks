@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Task;
+use App\Models\User;
 
 class TaskController extends Controller
 {
@@ -21,11 +22,13 @@ class TaskController extends Controller
             $tasks = Task::all();
         }
 
-        return view('welcome', ['tasks' => $tasks, 'search' => $search]);
+        return view('welcome', compact('tasks', 'search'));
     }
 
     public function create() {
-        return view('tasks.create');
+        $users = User::all();
+
+        return view('tasks.create', compact('users'));
     }
 
     public function store(Request $request) {
@@ -34,6 +37,7 @@ class TaskController extends Controller
         $task->title = $request->title;
         $task->description = $request->description;
         $task->status = $request->status;
+        $task->user_id = $request->user_id;
 
         $task->save();
 
@@ -43,7 +47,7 @@ class TaskController extends Controller
     public function show($id) {
         $task = Task::findOrFail($id);
 
-        return view('tasks.show', ['task' => $task]);
+        return view('tasks.show', compact('task'));
     }
 
     public function destroy($id) {
@@ -56,8 +60,9 @@ class TaskController extends Controller
 
     public function edit($id) {
         $task = Task::findOrFail($id);
+        $users = User::all();
 
-        return view('tasks.edit', ['task' => $task]);
+        return view('tasks.edit', compact('task', 'users'));
     }
 
     public function update(Request $request) {

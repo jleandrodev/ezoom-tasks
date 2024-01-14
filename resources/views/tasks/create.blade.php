@@ -16,6 +16,14 @@
             <textarea name="description" id="description" class="form-control" placeholder="O que deve ser feito?"></textarea>
         </div>
         <div class="form-group">
+            <label for="user_id">Responsável:</label>
+            <select name="user_id" id="user_id" class="form-control">
+                @foreach($users as $user)
+                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="status">Status:</label>
             <select name="status" id="status" class="form-control">
                 <option value="Pendente">Pendente</option>
