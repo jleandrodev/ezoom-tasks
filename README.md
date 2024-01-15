@@ -48,13 +48,17 @@ O Gerenciador de Tarefas é uma aplicação web construída com Laravel, um fram
     ```bash
     php artisan migrate
     ```
-   
-6. **Iniciar o Servidor da Aplicação:**
+6. **Instalar Dependências JavaScript e Compilar Recursos:**
+    ```bash
+    npm install
+    npm run dev
+    ```
+7. **Iniciar o Servidor da Aplicação:**
     ```bash
     php artisan serve
     ```
    
-7. **Acessar a Aplicação:** Abra seu navegador e acesse http://localhost:8000
+8. **Acessar a Aplicação:** Abra seu navegador e acesse http://localhost:8000
 
 ## Autenticação 
 
